@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33530.505
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JSC.DroneAssembler", "JSC.DroneAssembler\JSC.DroneAssembler.csproj", "{C9F8B55C-426A-4604-8A69-56443F15E5F0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JSC.DroneAssembler.Test", "JSC.DroneAssembler.Test\JSC.DroneAssembler.Test.csproj", "{A6715CE0-AE0B-43D8-AED8-331D7262AE61}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C9F8B55C-426A-4604-8A69-56443F15E5F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9F8B55C-426A-4604-8A69-56443F15E5F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9F8B55C-426A-4604-8A69-56443F15E5F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9F8B55C-426A-4604-8A69-56443F15E5F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6715CE0-AE0B-43D8-AED8-331D7262AE61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6715CE0-AE0B-43D8-AED8-331D7262AE61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6715CE0-AE0B-43D8-AED8-331D7262AE61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6715CE0-AE0B-43D8-AED8-331D7262AE61}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5798C531-66D7-41A0-AAD0-8D86DB1B7632}
+	EndGlobalSection
+EndGlobal
