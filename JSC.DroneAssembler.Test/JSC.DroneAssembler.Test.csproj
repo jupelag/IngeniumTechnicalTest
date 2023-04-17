@@ -9,6 +9,7 @@
   <ItemGroup>
     <PackageReference Include="FluentAssertions" Version="6.10.0" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.5.0" />
+    <PackageReference Include="Moq" Version="4.18.4" />
     <PackageReference Include="xunit" Version="2.4.2" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.4.5">
       <PrivateAssets>all</PrivateAssets>
@@ -17,7 +18,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\JSC.DroneAssembler\JSC.DroneAssembler.csproj" />
+    <ProjectReference Include="..\JSC.CannonLoader.BinarySearch\JSC.CannonLoader.BinarySearch.csproj" />
+    <ProjectReference Include="..\JSC.CannonLoader.LinearSearch\JSC.CannonLoader.LinearSearch.csproj" />
+    <ProjectReference Include="..\JSC.CannonLoader\JSC.CannonLoader.csproj" />
   </ItemGroup>
 
 </Project>

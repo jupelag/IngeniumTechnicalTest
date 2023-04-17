@@ -3,9 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33530.505
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JSC.DroneAssembler", "JSC.DroneAssembler\JSC.DroneAssembler.csproj", "{C9F8B55C-426A-4604-8A69-56443F15E5F0}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JSC.DroneAssembler.Test", "JSC.DroneAssembler.Test\JSC.DroneAssembler.Test.csproj", "{A6715CE0-AE0B-43D8-AED8-331D7262AE61}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JSC.CannonLoader.BinarySearch", "JSC.CannonLoader.BinarySearch\JSC.CannonLoader.BinarySearch.csproj", "{B020DAB4-46EF-4F9E-AA7C-D7EC7993596D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JSC.CannonLoader.LinearSearch", "JSC.CannonLoader.LinearSearch\JSC.CannonLoader.LinearSearch.csproj", "{DE63DEE1-FB92-4AED-AB37-DE3B7061CB2C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JSC.CannonLoader", "JSC.CannonLoader\JSC.CannonLoader.csproj", "{65F44A46-CC48-4D72-A420-B271DD174A3A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JSC.DroneAssembler.Shared", "JSC.DroneAssembler.Shared\JSC.DroneAssembler.Shared.csproj", "{0F33FCF8-174E-4ED2-9C81-2B277E8F2B83}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,14 +19,26 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{C9F8B55C-426A-4604-8A69-56443F15E5F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C9F8B55C-426A-4604-8A69-56443F15E5F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C9F8B55C-426A-4604-8A69-56443F15E5F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C9F8B55C-426A-4604-8A69-56443F15E5F0}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A6715CE0-AE0B-43D8-AED8-331D7262AE61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A6715CE0-AE0B-43D8-AED8-331D7262AE61}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A6715CE0-AE0B-43D8-AED8-331D7262AE61}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A6715CE0-AE0B-43D8-AED8-331D7262AE61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B020DAB4-46EF-4F9E-AA7C-D7EC7993596D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B020DAB4-46EF-4F9E-AA7C-D7EC7993596D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B020DAB4-46EF-4F9E-AA7C-D7EC7993596D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B020DAB4-46EF-4F9E-AA7C-D7EC7993596D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE63DEE1-FB92-4AED-AB37-DE3B7061CB2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE63DEE1-FB92-4AED-AB37-DE3B7061CB2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE63DEE1-FB92-4AED-AB37-DE3B7061CB2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE63DEE1-FB92-4AED-AB37-DE3B7061CB2C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65F44A46-CC48-4D72-A420-B271DD174A3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65F44A46-CC48-4D72-A420-B271DD174A3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65F44A46-CC48-4D72-A420-B271DD174A3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65F44A46-CC48-4D72-A420-B271DD174A3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F33FCF8-174E-4ED2-9C81-2B277E8F2B83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F33FCF8-174E-4ED2-9C81-2B277E8F2B83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F33FCF8-174E-4ED2-9C81-2B277E8F2B83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F33FCF8-174E-4ED2-9C81-2B277E8F2B83}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

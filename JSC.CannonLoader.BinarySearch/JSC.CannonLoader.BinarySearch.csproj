@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\JSC.CannonLoader\JSC.CannonLoader.csproj" />
+    <ProjectReference Include="..\JSC.DroneAssembler.Shared\JSC.DroneAssembler.Shared.csproj" />
+  </ItemGroup>
+
+</Project>

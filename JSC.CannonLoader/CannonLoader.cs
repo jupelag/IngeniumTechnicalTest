@@ -1,7 +1,6 @@
-﻿using JSC.DroneAssembler.Contracts;
-using System;
+﻿using JSC.CannonLoader.Contracts;
 
-namespace JSC.DroneAssembler
+namespace JSC.CannonLoader
 {
     public class CannonLoader:ICannonLoader
     {
@@ -17,13 +16,7 @@ namespace JSC.DroneAssembler
             if (heights.Count == 0) return 0;
             if (heights.Count == 1) return 0;
 
-            var firstPeakIndex = GetFirstPeakIndex(heights);
-            if (firstPeakIndex == 0) return 0;
-
-            var lastPeakIndex = GetLastPeakIndex(heights);
-            var maximumPeaksPossible = GetMaximumPeaksPossible(heights.Count);
-
-            return _searchStrategy.Search(heights, maximumPeaksPossible, firstPeakIndex, lastPeakIndex);
+            return _searchStrategy.Search(heights);
         }
 
         private static int GetLastPeakIndex(IReadOnlyList<uint> heights)
