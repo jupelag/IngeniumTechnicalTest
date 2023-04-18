@@ -24,7 +24,8 @@
             int lastPeakIndex = 0;
             for (int i = indexableHeigts.Length - 1; i > 0; i--)
             {
-                if (indexableHeigts[i] > indexableHeigts[i - 1] && indexableHeigts[i] > indexableHeigts[i + 1])
+                var isPeak = indexableHeigts[i] > indexableHeigts[i - 1] && indexableHeigts[i] > indexableHeigts[i + 1];
+                if (isPeak)
                 {
                     lastPeakIndex = i;
                     break;

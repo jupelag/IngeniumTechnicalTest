@@ -17,28 +17,40 @@ public class CannonLoaderLinearStrategy:ICannonLoaderSearchStrategy
 
         var lastPeakIndex = heights.GetLastPeakIndex();
 
+        return CountCannons(heights, maximumPeaksPossible, firstPeakIndex, lastPeakIndex);
+    }
+
+    private static int CountCannons(IReadOnlyList<uint> heights, int maximumPeaksPossible, int firstPeakIndex, int lastPeakIndex)
+    {
         for (int i = maximumPeaksPossible; i != 0; i--)
         {
-            int nCannons = 1;
-            var peakIndex = firstPeakIndex;
-            for (int j = firstPeakIndex + 1; j <= lastPeakIndex; j++)
-            {
-                if (heights[j] > heights[j - 1] && heights[j] > heights[j + 1])
-                {
-                    if (j - peakIndex >= i)
-                    {
-                        peakIndex = j;
-                        nCannons++;
-                    }
-                }
-            }
+            var nCannons = CountCannonsForNumberOfPeaks(heights, firstPeakIndex, lastPeakIndex, i);
 
-            if (nCannons == i)
+            if (nCannons >= i)
             {
                 return i;
             }
         }
 
         return 0;
+    }
+
+    private static int CountCannonsForNumberOfPeaks(IReadOnlyList<uint> heights, int firstPeakIndex, int lastPeakIndex, int i)
+    {
+        int nCannons = 1;
+        var peakIndex = firstPeakIndex;
+        for (int j = firstPeakIndex + 1; j <= lastPeakIndex; j++)
+        {
+            var isPeak = heights[j] > heights[j - 1] && heights[j] > heights[j + 1];
+            if (!isPeak) continue;
+
+            var isInCorrectDistance = j - peakIndex >= i;
+            if (!isInCorrectDistance) continue;
+
+            peakIndex = j;
+            nCannons++;
+        }
+
+        return nCannons;
     }
 }

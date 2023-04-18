@@ -1,5 +1,6 @@
 ﻿using FluentAssertions;
 using JSC.CannonLoader.BinarySearch;
+using JSC.CannonLoader.LinearSearch;
 using Xunit;
 
 namespace JSC.DroneAssembler.Test
@@ -55,6 +56,14 @@ namespace JSC.DroneAssembler.Test
                 174, 794, 396 };
             var strategy = new CannonLoaderBinaryStrategy();
             strategy.Search(heights).Should().Be(14);
+        }
+        [Fact]
+        public void Search_returns_correct_number_3()
+        {
+            var heights = new uint[] { 684992588, 593153796, 771717230, 334860786, 951790705, 1937321820, 141903406, 254837139, 1683823477,
+                1054917285, 1301421334, 2084700959, 862856019, 86566334, 43345350, 1442450192, 442124691, 208315017, 1830924218, 1250225361 };
+            var strategy = new CannonLoaderBinaryStrategy();
+            strategy.Search(heights).Should().Be(3);
         }
     }
 }

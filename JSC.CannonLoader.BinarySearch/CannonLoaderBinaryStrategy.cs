@@ -17,6 +17,12 @@ namespace JSC.CannonLoader.BinarySearch
             var lastPeakIndex = heights.GetLastPeakIndex();
             var maximumPeaksPossible = heights.GetMaximumPeaksPossible();
 
+            return GetCannonsByBinarySearch(heights, maximumPeaksPossible, firstPeakIndex, lastPeakIndex);
+        }
+
+        private static int GetCannonsByBinarySearch(IReadOnlyList<uint> heights, int maximumPeaksPossible, int firstPeakIndex,
+            int lastPeakIndex)
+        {
             int left = 1;
             int right = maximumPeaksPossible;
             int result = -1;
@@ -24,20 +30,7 @@ namespace JSC.CannonLoader.BinarySearch
             while (left <= right)
             {
                 int mid = left + (right - left) / 2;
-                int nCannons = 1;
-                var peakIndex = firstPeakIndex;
-
-                for (int j = firstPeakIndex + 1; j <= lastPeakIndex; j++)
-                {
-                    if (heights[j] > heights[j - 1] && heights[j] > heights[j + 1])
-                    {
-                        if (j - peakIndex >= mid)
-                        {
-                            peakIndex = j;
-                            nCannons++;
-                        }
-                    }
-                }
+                var nCannons = CountCannons(heights, firstPeakIndex, lastPeakIndex, mid);
 
                 if (nCannons >= mid)
                 {
@@ -51,6 +44,27 @@ namespace JSC.CannonLoader.BinarySearch
             }
 
             return result;
+        }
+
+        private static int CountCannons(IReadOnlyList<uint> heights, int firstPeakIndex, int lastPeakIndex, int mid)
+        {
+            int nCannons = 1;
+            var peakIndex = firstPeakIndex;
+
+            for (int j = firstPeakIndex + 1; j <= lastPeakIndex; j++)
+            {
+                var isPeak = heights[j] > heights[j - 1] && heights[j] > heights[j + 1];
+                if (isPeak)
+                {
+                    if (j - peakIndex >= mid)
+                    {
+                        peakIndex = j;
+                        nCannons++;
+                    }
+                }
+            }
+
+            return nCannons;
         }
     }
 }
